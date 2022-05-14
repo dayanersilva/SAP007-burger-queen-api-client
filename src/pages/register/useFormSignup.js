@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { TokenAndRole } from '../../Local/localStorageAndURL.js';
 
 const useFormSignup  = () => {
-    const [elements, setElements] = useState({
+    const [elements, setElement] = useState({
         name: '',
         email: '',
         password: '',
@@ -12,7 +12,7 @@ const useFormSignup  = () => {
     });
 
     const handleChange = (e) => {
-        return setElements(() => {
+        return setElement(() => {
             const copyElements = { ...elements };
             copyElements[e.target.name] = e.target.value;
             return copyElements;
