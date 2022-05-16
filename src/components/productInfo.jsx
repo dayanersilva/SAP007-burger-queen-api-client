@@ -1,26 +1,24 @@
-// import React from "react";
+import React from "react";
 
-// const ProductInfo = ({
-//   name,
-//   price,
-//   flavor,
-//   complement,
-//   qtd,
-//   onClick,
-//   onClickDelete,
-//   classItem,
-//   hidePlus,
-//   hideMinus,
-//   hideInfo
-// }) => (
-//   <article className={classItem}>
-//     <p className='product-info'>{name}</p>
-//     <p className={`product-info ${hideInfo}`}>{flavor}</p>
-//     <p className={`product-info ${hideInfo}`}>{complement}</p>
-//     <p className={`product-info ${hideInfo}`}>{qtd}</p>
-//     <p className='product-info'>R${price},00</p>
-//     <hr className={`down-line ${hideInfo}`}></hr>
-//   </article>
-// );
+function ProductsCards({
+	image, name, flavor, complement, price, onClick
+}) {
+	return (
+		<div className='each-card'>
+			<ul className='items'>
+				<div className='image-item'>
+					<img src={image} alt='Item'></img>
+				</div>
+				<li className='item-name'>{name}</li>
+				<section className='add-item'>
+				<li  className='flavor' value='sabor'>Sabor: {flavor}</li>
+				<li className='complement' name='complemento'>Complemento: {`${complement !== null ? complement : '' }`}</li>
+				</section>
+				<li>Preço: R${price}</li>
+			</ul>
+			<button className='add-btn' onClick={onClick}>Adicionar</button>
+		</div>
+	);
+}
 
-// export default ProductInfo;
+export default ProductsCards;

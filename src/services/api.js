@@ -38,4 +38,5 @@ export const getProducts = (endpoint) => {
       'Authorization': getToken(),
     },
   })
+  .then(res => res.json());
 };
