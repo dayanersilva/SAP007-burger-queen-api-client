@@ -1,13 +1,11 @@
 import React from "react";
 
-function ProductsCards({
-	image, name, flavor, complement, price, onClick
-}) {
+const ProductsCards = ({ image, name, flavor, complement, price, onClick}) => {
 	return (
 		<div className='each-card'>
 			<ul className='items'>
 				<div className='image-item'>
-					<img src={image} alt='Item'></img>
+					<img src={image} alt='Item' width={'60px'}></img>
 				</div>
 				<li className='item-name'>{name}</li>
 				<section className='add-item'>
@@ -19,6 +17,6 @@ function ProductsCards({
 			<button className='add-btn' onClick={onClick}>Adicionar</button>
 		</div>
 	);
-}
+};
 
 export default ProductsCards;
