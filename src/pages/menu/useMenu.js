@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-//import ProductsCards from "../../components/productInfo";
 import { getProducts } from "../../services/api";
 
 
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   const [showMenu, setShowMenu] = useState();
+  const [items, setItems] = useState([]);
 
   const getData = async () => {
     const data = await getProducts('/products');
@@ -23,13 +23,26 @@ const useProducts = () => {
   const productsFiltered = () => {
     if (showMenu === 'breakfast') {
       return products.filter((elem) => elem.type === 'breakfast')
-    } else if (showMenu === 'allDay') {
-      return products.filter((elem) => elem.type === 'allDay')
+    } else if (showMenu === 'all-day') {
+      return products.filter((elem) => elem.type === 'all-day')
+    } else if (showMenu === 'drinks') {
+      return products.filter((elem) => elem.sub_type === 'drinks')
     }
-    console.log(products)
     return []
   }
 
-  return { handleButtonTypeClick, productsFiltered }
+  const handleAddItem = (product) => {
+    const productIndex = items.findIndex((item) => {
+      return item.id === product.id
+    })
+    if(productIndex === -1) {
+      setItems([...items, {...product, qtd: 1}])
+    } else {
+      items[productIndex].qtd += 1
+      setItems([...items])
+    }
+  };
+
+  return { handleButtonTypeClick, productsFiltered, handleAddItem, items }
 };
 export default useProducts;

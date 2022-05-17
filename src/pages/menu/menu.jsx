@@ -1,50 +1,40 @@
-import React, {useState} from 'react';
+import React from 'react';
 import useProducts from "./useMenu";
 import ProductsCards from '../../components/productInfo';
 
 const Menu = () => {
-  const [items, setItems] = useState([]);
   const {
     handleButtonTypeClick,
-    productsFiltered
+    productsFiltered, 
+    handleAddItem, 
+    items
   } = useProducts();
-  const handleAddItem = (product) => {
-    console.log(product)
-    const productIndex = items.findIndex((item) => {
-      return item.id === product.id
-    })
-    if(productIndex === -1) {
-      setItems([...items, {...product, qtd: 1}])
-    } else {
-      items[productIndex].qtd += 1
-      setItems([...items])
-    }
-  }
   return (
-    <main className='main'>
+    <main className='menu'>
       <p> MENU </p>
-      <div className='menu-types'>
-        <button className='menu-button' onClick={handleButtonTypeClick} value={'breakfast'}>Café da manhã</button>
-        <button className='menu-button' onClick={handleButtonTypeClick} value={'allDay'}>All Day</button>
+      <div className='menu-type'>
+        <button className='btn-menu' onClick={handleButtonTypeClick} value={'breakfast'}>Café da manhã</button>
+        <button className='btn-menu' onClick={handleButtonTypeClick} value={'all-day'}>All Day</button>
+        <button className='btn-menu' onClick={handleButtonTypeClick} value={'drinks'}>Bebidas</button>
       </div>    
-      <div>
+      <section className='products-list'>
         <ul>
-          {items.map((item, index) => <li key={index}>{item.name} {item.qtd} </li>)}
+          {items.map((item, index) => <li className='cart' key={index}>{item.name} {item.qtd} </li>)}
         </ul>
-        {productsFiltered().map((element, index) => {
+        {productsFiltered().map((elem, index) => {
           return (
             <ProductsCards
             key={index}
-            image={element.image}
-            name={element.name}
-            flavor={element.flavor}
-            complement={element.complement}
-            price={element.price}
-            onClick={() => handleAddItem(element)}
+            image={elem.image}
+            name={elem.name}
+            flavor={elem.flavor}
+            complement={elem.complement}
+            price={elem.price}
+            onClick={() => handleAddItem(elem)}
             />
           )
         })}
-      </div>
+      </section>
     </main>
   );
 };

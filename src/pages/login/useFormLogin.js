@@ -42,9 +42,7 @@ const useFormLogin = () => {
           navigate('/kitchen');
         }
       })
-      .catch((error) => {
-        //Erro de comunicação do fetch com a api
-      });
+      .catch((error) => {});
   };
 
   return { handleChange, handleSubmit, error };

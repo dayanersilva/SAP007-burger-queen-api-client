@@ -40,7 +40,7 @@ const useFormSignup = () => {
         }
       })
       .then(data => {
-        if (data.role === 'attendent') {
+        if (data.role === 'attendant') {
           TokenAndRole(data.token, data.role);
           loginUser('/auth', data);
           navigate('/menu');
@@ -50,9 +50,7 @@ const useFormSignup = () => {
           navigate('/kitchen');
         }
       })
-      .catch((error) => {
-        //Erro de comunicação do fetch com a api
-      });
+      .catch((error) => {});
   };
 
   return { handleChange, handleSubmit, error };

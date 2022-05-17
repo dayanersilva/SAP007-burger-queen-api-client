@@ -2,10 +2,9 @@ import { URL, getToken } from "../Local/localStorageAndURL.js";
 
 export const createUser = (endpoint, elements) => {
   return fetch(`${URL}${endpoint}`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      // "Authorization": getToken(),
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       name: elements.name,
