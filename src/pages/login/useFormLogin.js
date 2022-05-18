@@ -34,7 +34,7 @@ const useFormLogin = () => {
         }
       })
       .then((data) => {
-        if (data.role === 'attendant') {
+        if (data.role === 'attendent') {
           TokenAndRole(data.token, data.role);
           navigate('/menu');
         } else if (data.role === 'chef') {

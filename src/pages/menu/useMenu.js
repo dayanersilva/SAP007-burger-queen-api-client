@@ -4,8 +4,11 @@ import { getProducts } from "../../services/api";
 
 const useProducts = () => {
   const [products, setProducts] = useState([]);
-  const [showMenu, setShowMenu] = useState();
   const [items, setItems] = useState([]);
+  const [productsType, setProductsType] = useState();
+  const [flavor, setFlavor] = useState();
+  const [complement, setComplement] = useState('');
+
 
   const getData = async () => {
     const data = await getProducts('/products');
@@ -17,17 +20,24 @@ const useProducts = () => {
   }, []);
 
   const handleButtonTypeClick = (e) => {
-    setShowMenu(e.target.value)
-  };
+    setProductsType(e.target.value);
+  }
+  const handleSelectFlavor = (e) => setFlavor(e.target.value);
+  const handleSelectComplement = (e) => setComplement(e.target.value);
 
   const productsFiltered = () => {
-    if (showMenu === 'breakfast') {
+    if (productsType === 'breakfast') {
       return products.filter((elem) => elem.type === 'breakfast')
-    } else if (showMenu === 'all-day') {
-      return products.filter((elem) => elem.type === 'all-day')
-    } else if (showMenu === 'drinks') {
-      return products.filter((elem) => elem.sub_type === 'drinks')
-    }
+    } else if( productsType === 'hamburguer') {
+      // if(flavor !== '') {
+        let filterHamburguer = products.filter((elem) => elem.flavor === flavor)
+        if(complement !== '' ){
+          return filterHamburguer.filter((elem) => elem.complement === complement)
+        }
+        return filterHamburguer;
+    } else if (productsType === 'side' || productsType === 'drinks') {
+      return products.filter((elem) => elem.sub_type === productsType)
+    } 
     return []
   }
 
@@ -43,6 +53,6 @@ const useProducts = () => {
     }
   };
 
-  return { handleButtonTypeClick, productsFiltered, handleAddItem, items }
+  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleSelectComplement, productsType, items }
 };
 export default useProducts;

@@ -12,7 +12,7 @@ const SignUp = () => {
         <label className='sub-title'>Cargo</label>
         <select className='select-role' autoComplete='off' name='role' onChange={handleChange}>
           <option value=''>Selecione um cargo</option>
-          <option value='attendant'>Atendente</option>
+          <option value='attendent'>Atendente</option>
           <option value='chef'>Chef de Cozinha</option>
         </select>
         <label className='sub-title'>Email</label>
