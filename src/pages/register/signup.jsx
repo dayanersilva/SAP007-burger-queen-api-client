@@ -10,8 +10,8 @@ const SignUp = () => {
         <label className='sub-title'>Seu nome</label>
         <input className='input-name' type='text' placeholder='Nome' name='name' autoComplete='off' onChange={handleChange}/>
         <label className='sub-title'>Cargo</label>
-        <select className='select-role' autoComplete='off' name='role' onChange={handleChange}>
-          <option value=''>Selecione um cargo</option>
+        <select className='select-role' defaultValue={'Selecione um cargo'} autoComplete='off' name='role' onChange={handleChange}>
+          <option value='Selecione um cargo'>Selecione um cargo</option>
           <option value='attendent'>Atendente</option>
           <option value='chef'>Chef de Cozinha</option>
         </select>

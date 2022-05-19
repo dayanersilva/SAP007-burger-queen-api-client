@@ -2,6 +2,7 @@ import React from 'react';
 import useProducts from "./useMenu";
 import ProductsCards from '../../components/productInfo';
 import Cart from '../../components/cart';
+import ResultPrice from '../../components/resultPrice';
 
 const Menu = () => {
   const {
@@ -10,7 +11,10 @@ const Menu = () => {
     handleAddItem,
     handleSelectComplement,
     handleSelectFlavor, 
+    handleSendToKitchen,
+    handleOrderChange,
     productsType,
+    total,
     items
   } = useProducts();
   return (
@@ -25,8 +29,8 @@ const Menu = () => {
       <section>
       {productsType === 'hamburguer' ? (
           <div>
-            <select onChange={handleSelectFlavor}>
-              <option value='escolher o sabor' selected disabled>Escolher o sabor</option>
+            <select defaultValue={'escolher o sabor'} onChange={handleSelectFlavor}>
+              <option value='escolher o sabor'>Escolher o sabor</option>
               <option value='carne'>Carne</option>
               <option value='frango'>Frango</option>
               <option value='vegetariano'>Vegetariano</option>
@@ -38,10 +42,10 @@ const Menu = () => {
         ) : ''} </section> 
         <section className='cart-info'>
               <label className='menu-labels'>Cliente</label>
-              <input className='menu-input' type='text' placeholder='Nome' name='client' autoComplete='off'/>
+              <input className='menu-input' type='text' placeholder='Nome' name='client' autoComplete='off' onChange={handleOrderChange}/>
               <label className='menu-labels'>Mesa</label>
-              <select className='menu-select' autoComplete='off' name='table'>
-                <option value=''>Selecione uma mesa</option>
+              <select className='menu-select' defaultValue={'Selecione uma mesa'} autoComplete='off' name='table' onChange={handleOrderChange}>
+                <option value='Selecione uma mesa'>Selecione uma mesa</option>
                 <option value='1'>Mesa 1</option>
                 <option value='2'>Mesa 2</option>
                 <option value='3'>Mesa 3</option>
@@ -67,6 +71,8 @@ const Menu = () => {
               />
             )
           })}
+          <ResultPrice value={total} />
+          <button className='btn-menu' onClick={handleSendToKitchen} value='items'> Finalizar Pedido </button>
         </section>
         <section className='products-list'>
         {productsFiltered().map((elem, index) => {
@@ -75,7 +81,7 @@ const Menu = () => {
             key={index}
             image={elem.image}
             name={elem.name}
-            flavor={elem.flavor}
+            flavor={elem.flavor} 
             complement={elem.complement}
             price={elem.price}
             onClick={() => handleAddItem(elem)}
