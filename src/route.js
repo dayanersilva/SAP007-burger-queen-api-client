@@ -10,8 +10,8 @@ const AllRoute = () => {
       <div>
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
           <Route path='/menu' element={<Menu />} />
         </Routes>
       </div>

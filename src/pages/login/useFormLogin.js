@@ -34,7 +34,7 @@ const useFormLogin = () => {
         }
       })
       .then((data) => {
-        if (data.role === 'attendant') {
+        if (data.role === 'attendent') {
           TokenAndRole(data.token, data.role);
           navigate('/menu');
         } else if (data.role === 'chef') {
@@ -42,9 +42,7 @@ const useFormLogin = () => {
           navigate('/kitchen');
         }
       })
-      .catch((error) => {
-        //Erro de comunicação do fetch com a api
-      });
+      .catch((error) => {});
   };
 
   return { handleChange, handleSubmit, error };

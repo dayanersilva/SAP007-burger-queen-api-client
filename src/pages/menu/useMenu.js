@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-//import ProductsCards from "../../components/productInfo";
 import { getProducts } from "../../services/api";
 
 
 const useProducts = () => {
   const [products, setProducts] = useState([]);
-  const [showMenu, setShowMenu] = useState();
+  const [items, setItems] = useState([]);
+  const [productsType, setProductsType] = useState();
+  const [flavor, setFlavor] = useState();
+  const [complement, setComplement] = useState('');
+
 
   const getData = async () => {
     const data = await getProducts('/products');
@@ -17,19 +20,46 @@ const useProducts = () => {
   }, []);
 
   const handleButtonTypeClick = (e) => {
-    setShowMenu(e.target.value)
-  };
+    setProductsType(e.target.value);
+  }
+  const handleSelectFlavor = (e) => setFlavor(e.target.value);
+  const handleSelectComplement = (e) => setComplement(e.target.value);
 
   const productsFiltered = () => {
-    if (showMenu === 'breakfast') {
+    if (productsType === 'breakfast') {
       return products.filter((elem) => elem.type === 'breakfast')
+<<<<<<< HEAD
     } else if (showMenu === 'all-day') {
       return products.filter((elem) => elem.type === 'all-day')
     }
     console.log(products)
+=======
+    } else if( productsType === 'hamburguer') {
+      // if(flavor !== '') {
+        let filterHamburguer = products.filter((elem) => elem.flavor === flavor)
+        if(complement !== '' ){
+          return filterHamburguer.filter((elem) => elem.complement === complement)
+        }
+        return filterHamburguer;
+    } else if (productsType === 'side' || productsType === 'drinks') {
+      return products.filter((elem) => elem.sub_type === productsType)
+    } 
+>>>>>>> 13df8fe670b88c679cbe8000f7891728538c1b43
     return []
   }
 
-  return { handleButtonTypeClick, productsFiltered }
+  const handleAddItem = (product) => {
+    const productIndex = items.findIndex((item) => {
+      return item.id === product.id
+    })
+    if(productIndex === -1) {
+      setItems([...items, {...product, qtd: 1}])
+    } else {
+      items[productIndex].qtd += 1
+      setItems([...items])
+    }
+  };
+
+  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleSelectComplement, productsType, items }
 };
 export default useProducts;
