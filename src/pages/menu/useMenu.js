@@ -28,23 +28,16 @@ const useProducts = () => {
   const productsFiltered = () => {
     if (productsType === 'breakfast') {
       return products.filter((elem) => elem.type === 'breakfast')
-<<<<<<< HEAD
-    } else if (showMenu === 'all-day') {
-      return products.filter((elem) => elem.type === 'all-day')
-    }
-    console.log(products)
-=======
-    } else if( productsType === 'hamburguer') {
+    } else if (productsType === 'hamburguer') {
       // if(flavor !== '') {
-        let filterHamburguer = products.filter((elem) => elem.flavor === flavor)
-        if(complement !== '' ){
-          return filterHamburguer.filter((elem) => elem.complement === complement)
-        }
-        return filterHamburguer;
+      let filterHamburguer = products.filter((elem) => elem.flavor === flavor)
+      if (complement !== '') {
+        return filterHamburguer.filter((elem) => elem.complement === complement)
+      }
+      return filterHamburguer;
     } else if (productsType === 'side' || productsType === 'drinks') {
       return products.filter((elem) => elem.sub_type === productsType)
-    } 
->>>>>>> 13df8fe670b88c679cbe8000f7891728538c1b43
+    }
     return []
   }
 
@@ -52,8 +45,8 @@ const useProducts = () => {
     const productIndex = items.findIndex((item) => {
       return item.id === product.id
     })
-    if(productIndex === -1) {
-      setItems([...items, {...product, qtd: 1}])
+    if (productIndex === -1) {
+      setItems([...items, { ...product, qtd: 1 }])
     } else {
       items[productIndex].qtd += 1
       setItems([...items])

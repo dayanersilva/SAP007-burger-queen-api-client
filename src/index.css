@@ -1,16 +1,17 @@
+@import './pages/login/login-signup.module.css';
 
 :root {
-  --default-font-color: #a671cd;
-  --secondy-font-color: #c3a9d6;
-  --background-cards: #ece4f2;
-  --default-background: #f8f5fa;
+  --default-font-color: #ffffff;
+  --secondy-font-color: #8c8c8c;
+  --background-cards: #a671cd;
+  --default-background: #0d0c0c;
 }
 
 * {
   margin: 0;
   padding: 0;
   color: var(--default-font-color);
-  font-family: "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 form {

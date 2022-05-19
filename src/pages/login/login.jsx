@@ -1,25 +1,55 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import useFormLogin  from './useFormLogin.js';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import useFormLogin from "./useFormLogin.js";
+
+import logo from "../../img/logo.png";
+import styles from "./login-signup.module.css";
 
 const Login = () => {
   const { handleChange, handleSubmit, error } = useFormLogin();
   const navigate = useNavigate();
   return (
-    <main className='login'>
-      <form className='page-login'>
-        <h2 className='title'>Login</h2>
-        <label className='sub-title'>Email</label>
-        <input className='input-email' type='email' name='email' autoComplete='off' onChange={handleChange}/>
-        <label className='sub-title'>Senha</label>
-        <input className='input-pass' type='password' name='password' onChange={handleChange} />
-        <span className='errors-message'>{error}</span>
-        <button className='btn-login' onClick={handleSubmit}>Logar</button>
-        <p className='sub-title'>Não possui cadastro?</p>
-        <button className='btn-signup' onClick={() => { navigate('/signup') }}>Cadastre-se</button>
-      </form>
-    </main>
-  );  
+    <div className={styles.root}>
+      <main className={styles.main}>
+        <picture>
+          <img src={logo} alt="Quem disse Burguer" className={styles.logo} />
+        </picture>
+        <form>
+          <h2 className={styles.title}>Login</h2>
+          <input
+            className={styles.inputForm}
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            autoComplete="off"
+            onChange={handleChange}
+          />
+          <input
+            className={styles.inputForm}
+            type="password"
+            name="password"
+            placeholder="Senha"
+            onChange={handleChange}
+          />
+          <span className={styles.errorsMessage}>{error}</span>
+          <button className={styles.loginBtn} onClick={handleSubmit}>
+            Logar
+          </button>
+          <div className={styles.toRegistration}>
+            <p className={styles.registrationTitle}>Não possui cadastro?</p>
+            <button
+              className={styles.toRegisterButton}
+              onClick={() => {
+                navigate("/signup");
+              }}
+            >
+              Cadastre-se
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  );
 };
 
 export default Login;
