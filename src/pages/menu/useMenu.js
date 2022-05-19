@@ -23,8 +23,8 @@ const useProducts = () => {
   const productsFiltered = () => {
     if (showMenu === 'breakfast') {
       return products.filter((elem) => elem.type === 'breakfast')
-    } else if (showMenu === 'allDay') {
-      return products.filter((elem) => elem.type === 'allDay')
+    } else if (showMenu === 'all-day') {
+      return products.filter((elem) => elem.type === 'all-day')
     }
     console.log(products)
     return []

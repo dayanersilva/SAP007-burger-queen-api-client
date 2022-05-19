@@ -25,7 +25,7 @@ const Menu = () => {
       <p> MENU </p>
       <div className='menu-types'>
         <button className='menu-button' onClick={handleButtonTypeClick} value={'breakfast'}>Café da manhã</button>
-        <button className='menu-button' onClick={handleButtonTypeClick} value={'allDay'}>All Day</button>
+        <button className='menu-button' onClick={handleButtonTypeClick} value={'all-day'}>All Day</button>
       </div>    
       <div>
         <ul>

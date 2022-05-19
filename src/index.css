@@ -1,0 +1,26 @@
+
+:root {
+  --default-font-color: #a671cd;
+  --secondy-font-color: #c3a9d6;
+  --background-cards: #ece4f2;
+  --default-background: #f8f5fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--default-font-color);
+  font-family: "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+}
+
+@media only screen and (min-width:769px) {
+  form {
+      width: 20rem;
+  }
+}
