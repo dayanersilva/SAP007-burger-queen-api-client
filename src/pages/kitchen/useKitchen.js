@@ -43,7 +43,7 @@ const useKitchen = () => {
             }]));
       }
     } else {
-      console.log('Apenas um(a) chef pode iniciar/finalizar um pedido')
+      console.log('Apenas um chef pode iniciar/finalizar um pedido')
     }
   };
 

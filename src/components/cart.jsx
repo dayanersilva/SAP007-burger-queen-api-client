@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({ name, flavor, complement, price, qtd}) => {
+const Cart = ({ name, flavor, complement, price, qtd, onClick}) => {
     return (
         <section className='card-cart'>
             <ul className='items'>
@@ -12,6 +12,7 @@ const Cart = ({ name, flavor, complement, price, qtd}) => {
                 <li>Preço: R${price},00</li>
                 <li>Quantidade: {qtd} </li>
             </ul>
+          <button className='add-btn' onClick={onClick}>Excluir item</button>
         </section>
     );
 };

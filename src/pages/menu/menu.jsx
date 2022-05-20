@@ -3,14 +3,17 @@ import useProducts from "./useMenu";
 import ProductsCards from '../../components/productInfo';
 import Cart from '../../components/cart';
 import ResultPrice from '../../components/resultPrice';
+import { useNavigate } from 'react-router-dom';
 
 const Menu = () => {
-  const {
+    const navigate = useNavigate();
+    const {
     handleButtonTypeClick,
     productsFiltered, 
     handleAddItem,
     handleSelectComplement,
-    handleSelectFlavor, 
+    handleSelectFlavor,
+    handleDeleteProducts, 
     handleSendToKitchen,
     handleOrderChange,
     productsType,
@@ -20,6 +23,9 @@ const Menu = () => {
   return (
     <main className='menu'>
       <p> MENU </p>
+      <div className='request'>
+        <button className='btn-request' onClick={() => { navigate('/order') }} value='request'>Pedidos</button>
+      </div>
       <div className='menu-type'>
         <button className='btn-menu' onClick={handleButtonTypeClick} value={'breakfast'}>Café da manhã</button>
         <button className='btn-menu' onClick={handleButtonTypeClick} value={'hamburguer'}>Hamburguer</button>
@@ -68,6 +74,7 @@ const Menu = () => {
               complement={item.complement}
               price={item.price}
               qtd={item.qtd} 
+              onClick= {() => handleDeleteProducts(item)}
               />
             )
           })}

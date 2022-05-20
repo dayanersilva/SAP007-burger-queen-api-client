@@ -56,6 +56,32 @@ const useProducts = () => {
     }  
   };
 
+  const handleDeleteProducts = (elem) => {
+    const foundItem = items.findIndex((item) => item.id === elem.id);
+    if (foundItem !== -1) {
+      const qtd = items[foundItem].qtd
+      if (qtd === 1) {
+        const removed = items
+        removed.splice(foundItem, 1)
+        setItems([...removed])
+      } else {
+        const newArr = items;
+        newArr[foundItem].qtd--;
+        setItems([...newArr])
+      }
+    } else {
+      setItems(
+        [...items,
+        {
+          id: elem.id,
+          qtd: elem.qtd,
+          name: elem.name,
+          price: elem.price,
+          flavor: elem.flavor
+        }]);
+    }
+  };
+
   useEffect(() => {
     const sum = (previousValue, currentValue) => previousValue + currentValue;
     setTotal(() => {
@@ -92,6 +118,6 @@ const useProducts = () => {
 
 
 
-  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleSelectComplement, handleSendToKitchen, handleOrderChange, productsType, items, total }
+  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleDeleteProducts, handleSelectComplement, handleSendToKitchen, handleOrderChange, productsType, items, total }
 };
 export default useProducts;

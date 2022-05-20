@@ -1,5 +1,7 @@
 import React from "react";
 import OrderProducts from './orderProduct';
+// import { TimeOrInterval } from "./time/time";
+// import { initialStatus } from './time/date';
 
 const nameButton = (status) => {
     if (status === 'pending') {
@@ -19,7 +21,7 @@ const initialStatus = (status) => {
     } else {
       return 'Finalizado';
     }
-};
+  };
 
 const OrderCard = ({
     id,
@@ -36,7 +38,7 @@ const OrderCard = ({
           Pedido N°{id}
       </div>
       <div className='cards-info'>
-         {/* <TimeOrInterval createdAt={createdAt} updatedAt={updatedAt} status={status} /> */}
+        {/* <TimeOrInterval createdAt={createdAt} updatedAt={updatedAt} status={status} /> */}
           Nome:
         <p className='order-info'>{name}</p>
           Mesa:
