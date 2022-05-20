@@ -3,6 +3,8 @@ import useProducts from "./useMenu";
 import ProductsCards from "../../components/productInfo";
 import Cart from "../../components/cart";
 import ResultPrice from "../../components/resultPrice";
+import MenuHamburguer from "../../components/menuHamburguer";
+import { useNavigate } from "react-router-dom";
 
 import logoroxo from "../../img/logoroxo.png";
 import styles from "./menu.module.css";
@@ -24,11 +26,11 @@ const Menu = () => {
   } = useProducts();
   return (
     <div className={styles.root}>
-      <main className={styles.main}>
+      <main>
         <nav className={styles.navBar}>
-          <ul className={styles.menuHamburguer}>
-            <li className={styles.liMenu}> MENU </li>
-          </ul>
+          <div className={styles.menuHamburguer}>
+            <MenuHamburguer />
+          </div>
           <picture>
             <img
               src={logoroxo}
@@ -37,33 +39,44 @@ const Menu = () => {
             />
           </picture>
         </nav>
-        <section className={styles.abaAtendente}>
-          <section className={styles.sectionMenu}>
+        <div className="request">
+          <button
+            className="btn-request"
+            onClick={() => {
+              navigate("/order");
+            }}
+            value="request"
+          >
+            Pedidos
+          </button>
+        </div>
+        <section className={styles.attendantTabe}>
+          <section className={styles.orderingTab}>
             <div>
-              <div className={styles.selectionMenu}>
+              <div className={styles.orderSelection}>
                 <button
-                  className={styles.buttonMenu}
+                  className={styles.selectionButton}
                   onClick={handleButtonTypeClick}
                   value={"breakfast"}
                 >
                   Café da manhã
                 </button>
                 <button
-                  className={styles.buttonMenu}
+                  className={styles.selectionButton}
                   onClick={handleButtonTypeClick}
                   value={"hamburguer"}
                 >
-                  Hamburguer
+                  Hambúrgueres
                 </button>
                 <button
-                  className={styles.buttonMenu}
+                  className={styles.selectionButton}
                   onClick={handleButtonTypeClick}
                   value={"side"}
                 >
                   Acompanhamentos
                 </button>
                 <button
-                  className={styles.buttonMenu}
+                  className={styles.selectionButton}
                   onClick={handleButtonTypeClick}
                   value={"drinks"}
                 >
@@ -71,7 +84,7 @@ const Menu = () => {
                 </button>
               </div>
               {productsType === "hamburguer" ? (
-                <section className={styles.selects}>
+                <section className={styles.flavorAndComplementSelection}>
                   <select
                     className={styles.selectFlavor}
                     defaultValue={"escolher o sabor"}
@@ -91,17 +104,17 @@ const Menu = () => {
                       type="radio"
                       name="check"
                       value="queijo"
-                      className={styles.complementQueijo}
+                      className={styles.cheeseComplement}
                       onChange={handleSelectComplement}
-                    />
+                    />{" "}
                     Queijo
                     <input
                       type="radio"
                       name="check"
                       value="ovo"
-                      className={styles.complementOvo}
+                      className={styles.eggComplement}
                       onChange={handleSelectComplement}
-                    />
+                    />{" "}
                     Ovo
                   </div>
                 </section>
@@ -109,7 +122,7 @@ const Menu = () => {
                 ""
               )}
             </div>
-            <ul className={styles.listProducts}>
+            <ul className={styles.productList}>
               {productsFiltered().map((element, index) => {
                 return (
                   <ProductsCards
@@ -125,13 +138,13 @@ const Menu = () => {
               })}
             </ul>
           </section>
-          <section className={styles.sectionPedido}>
-            <div className={styles.sectionPedidoTitle}>
+          <section className={styles.orderSection}>
+            <div className={styles.orderSectionTitle}>
               <h3 className={styles.hColor}>Pedido</h3>
             </div>
-            <div className={styles.infosCliente}>
+            <div className={styles.clientInformation}>
               <input
-                className={styles.nameCliente}
+                className={styles.clientName}
                 type="text"
                 placeholder="NOME"
                 name="client"
@@ -139,7 +152,7 @@ const Menu = () => {
                 onChange={handleOrderChange}
               />
               <select
-                className={styles.mesaCliente}
+                className={styles.clientTable}
                 defaultValue={"0"}
                 autoComplete="off"
                 name="table"
@@ -168,18 +181,18 @@ const Menu = () => {
                     complement={item.complement}
                     price={item.price}
                     qtd={item.qtd}
-                    type={item.sub_type}
+                    onClick={() => handleDeleteProducts(item)}
                   />
                 );
               })}
             </ul>
-            <section className={styles.final}>
-              <div className={styles.totalPedido}>
+            <section className={styles.finalization}>
+              <div className={styles.totalOrder}>
                 <h4>SUB-TOTAL</h4>
                 <ResultPrice value={total} />
               </div>
               <button
-                className={styles.finalizarPedido}
+                className={styles.finalizeOrder}
                 onClick={handleSendToKitchen}
               >
                 Finalizar pedido

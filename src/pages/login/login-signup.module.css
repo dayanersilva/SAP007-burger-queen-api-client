@@ -1,6 +1,5 @@
 .root::before {
   content: '';
-  /*background-color: #272829;*/
   background-image: url('../../img/Background.jpg');
   background-size: cover;
   top: 0;
@@ -59,12 +58,11 @@
 }
 
 .selectRole:hover {
-  background-color: var(--fonte-second);
+  background-color: var(--fonte-principal);
 }
 
 .optionSelectForm {
   background-color: var(--fonte-principal);
-  /* color: var(--default-font-color); */
 }
 
 .registrationSection {

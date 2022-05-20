@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getOrders, updateOrderStatus} from "../../services/api";
+import { getOrders, updateOrderStatus } from "../../services/api";
 import { getRole } from "../../Local/localStorageAndURL";
 
 
@@ -43,17 +43,17 @@ const useKitchen = () => {
             }]));
       }
     } else {
-      console.log('Apenas um chef pode iniciar/finalizar um pedido')
+      console.log('Apenas um(a) chef pode iniciar/finalizar um pedido')
     }
   };
 
-
-
-  return {orders,
+  return {
+    orders,
     setOrders,
     orderStatus,
     getData,
     ordersFiltered,
-    handleStatus,};
+    handleStatus,
+  };
 };
 export default useKitchen;

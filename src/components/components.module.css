@@ -1,3 +1,136 @@
+/* CARRINHO DE PEDIDOS */
+.order {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.orderContainer {
+  display: inline-flex;
+}
+
+.orderInformation {
+  font-size: 0.87rem;
+  margin-left: 1rem;
+}
+
+/* MENU HAMBURGUER */
+.icon {
+  height: 44px;
+  width: fit-content;
+  padding: 4px 25px;
+  margin-left: 1rem;
+  position: absolute;
+  top: 8px;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.hamburguer {
+  height: 3px;
+  width: 37px;
+  background-color: var(--fonte-principal);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transition: 0.5s;
+}
+
+.hamburguer::before {
+  content: '';
+  height: 3px;
+  width: 37px;
+  background-color: var(--fonte-principal);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -12px;
+  transition: 0.5s;
+}
+
+.hamburguer::after {
+  content: '';
+  height: 3px;
+  width: 37px;
+  background-color: var(--fonte-principal);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 12px;
+  transition: 0.5s;
+}
+
+.hamburguerMenuList {
+  height: 90%;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.hamburguerMenuListItems {
+  height: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.hamburguerMenuListItems li {
+  height: 2rem;
+  margin: 2px 8px 2px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburguerMenuListItems li:hover {
+  font-weight: 600;
+}
+
+.hamburguerMenuListItems li button {
+  border: none;
+  background: transparent;
+}
+
+.logoutButton {
+  position: absolute;
+  bottom: 15px;
+}
+
+/* "Animação" do menu hamburguer */
+.icon.iconActive .hamburguer {
+  background: transparent;
+  box-shadow: 0 2px 5px transparent;
+}
+
+.icon.iconActive .hamburguer::before {
+  background: var(--fonte-principal);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.icon.iconActive .hamburguer::after {
+  background: var(--fonte-principal);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+  transform: rotate(225deg);
+}
+
+.menu.menuOpen {
+  width: 25vw;
+  height: 88vh;
+  background: var(--background-cards);
+  box-shadow: 10px 0px 69px 0 rgba(0, 0, 0, 0.59);
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 57px;
+}
+
+.menu.menuClose {
+  width: 0;
+  display: none;
+}
+
 .card {
   background-color: var(--background-cards);
   height: 7.5rem;
