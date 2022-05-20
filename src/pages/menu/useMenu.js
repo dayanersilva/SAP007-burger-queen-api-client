@@ -6,7 +6,7 @@ import { getRole } from '../../Local/localStorageAndURL'
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   const [items, setItems] = useState([]);
-  const [productsType, setProductsType] = useState();
+  const [productsType, setProductsType] = useState('breakfast');
   const [flavor, setFlavor] = useState();
   const [complement, setComplement] = useState('');
   const [total, setTotal] = useState(0);

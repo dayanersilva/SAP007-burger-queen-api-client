@@ -30,7 +30,6 @@
   height: 3px;
   width: 37px;
   background-color: var(--fonte-principal);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 10%;
@@ -42,7 +41,6 @@
   height: 3px;
   width: 37px;
   background-color: var(--fonte-principal);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -12px;
   transition: 0.5s;
@@ -53,7 +51,6 @@
   height: 3px;
   width: 37px;
   background-color: var(--fonte-principal);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 12px;
   transition: 0.5s;
@@ -88,12 +85,12 @@
 .hamburguerMenuListItems li button {
   border: none;
   background: transparent;
+  color: var(--fonte-principal);
 }
 
 .logoutButton {
   position: absolute;
   bottom: 15px;
-  color: var(--fonte-principal);
 }
 
 /* "Animação" do menu hamburguer */
@@ -118,13 +115,13 @@
 
 .menu.menuOpen {
   width: 25vw;
-  height: 88vh;
+  height: 86vh;
   background: var(--background-cards);
-  box-shadow: 10px 0px 69px 0 rgba(0, 0, 0, 0.59);
+  box-shadow: 10px 0px 10px 0 rgba(0, 0, 0, 0.10);
   display: flex;
   align-items: center;
   position: relative;
-  top: 57px;
+  top: 65px;
 }
 
 .menu.menuClose {
@@ -144,8 +141,8 @@
   box-shadow: 2px 2px 2px var(--background-cards);
 }
 
-h3, 
-h4, 
+h3,
+h4,
 p {
   color: var(--fonte-principal);
 }
@@ -186,21 +183,17 @@ ul {
   color: var(--default-font-color);
 }
 
-.pedido {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
+@media only screen and (min-width:769px) {
+  .menu.menuOpen {
+    height: 88vh;
+    width: 20vw;
+  }
 
-.infoPedido {
-  font-size: 0.87rem;
-  margin-left: 1rem;
-}
+  .hamburguerMenuListItems li button {
+    font-size: 1rem;
+  }
 
-.cifrao {
-  margin-right: 1rem;
-}
-
-.divPedido {
-  display: inline-flex;
+  .hamburguerMenuListItems li {
+    margin: 4px 8px 4px 15px;
+  }
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 const OrderProducts = ({ id, qtd, name, flavor, complement }) => {
   return (
     <div className="order-item" key={id}>

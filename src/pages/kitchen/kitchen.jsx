@@ -1,33 +1,32 @@
-import React from "react";
 import { useEffect } from "react";
 import useKitchen from "./useKitchen"
 import OrderCard from "../../components/orderCards";
 
 const Kitchen = () => {
-    const { setOrders, getData, ordersFiltered, handleStatus, orders, orderStatus} = useKitchen();
-  
-    useEffect(() => {
-      const interval = setInterval(() => {
-        return getData();
-      }, 50);
-      return () => clearInterval(interval);
-    }, [])
-  
-    useEffect(() => {
-      if (orderStatus.status === 'finalizado') {
-        return orderStatus.map((order) => {
-          const foundOrder = orders.map((elem) => elem).findIndex((item) => item.id === order.id);
-          if (foundOrder !== -1) {
-            const removed = orders
-            removed.splice(foundOrder, 1)
-            setOrders([...removed])
-          }
-          return orders;
-        })
-      }
-    }, [orderStatus]);
-  
-    return ( 
+  const { setOrders, getData, ordersFiltered, handleStatus, orders, orderStatus } = useKitchen();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      return getData();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [])
+
+  useEffect(() => {
+    if (orderStatus.status === 'finalizado') {
+      return orderStatus.map((order) => {
+        const foundOrder = orders.map((elem) => elem).findIndex((item) => item.id === order.id);
+        if (foundOrder !== -1) {
+          const removed = orders
+          removed.splice(foundOrder, 1)
+          setOrders([...removed])
+        }
+        return orders;
+      })
+    }
+  }, [orderStatus]);
+
+  return (
     <main className='kitchen-main'>
       <p>KITCHEN</p>
       <div className='orders-list'>
@@ -52,6 +51,6 @@ const Kitchen = () => {
       </div>
 
     </main>
-   )
+  )
 }
 export default Kitchen;

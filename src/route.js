@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/login.jsx';
 import SignUp from './pages/register/signup.jsx';
@@ -16,13 +15,13 @@ const AllRoute = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/menu' element={<PrivateRoute redirectTo="/">
-            <Menu /> 
+            <Menu />
           </PrivateRoute>} />
           <Route path='/kitchen' element={<PrivateRoute redirectTo="/">
-            <Kitchen /> 
+            <Kitchen />
           </PrivateRoute>} />
           <Route path='/order' element={<PrivateRoute redirectTo="/">
-            <Order /> 
+            <Order />
           </PrivateRoute>} />
         </Routes>
       </div>

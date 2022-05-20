@@ -1,6 +1,7 @@
 @import './pages/login/login-signup.module.css';
 @import './pages/menu/menu.module.css';
 @import './components/components.module.css';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
 :root {
   --default-font-color: #ffffff;
@@ -10,8 +11,6 @@
   --fonte-principal: #a671cd;
   --fonte-second: #c3a9d6;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -27,6 +26,6 @@ form {
 
 @media only screen and (min-width:769px) {
   form {
-      width: 20rem;
+    width: 20rem;
   }
 }

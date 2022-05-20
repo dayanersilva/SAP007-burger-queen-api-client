@@ -1,5 +1,3 @@
-import React from "react";
-
 const ResultPrice = (total) => {
   return (
     <div className="total-area">

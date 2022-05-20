@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./components.module.css";
 
 const Cart = ({ name, flavor, complement, price, qtd, type, onClick }) => {

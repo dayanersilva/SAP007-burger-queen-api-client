@@ -1,4 +1,3 @@
-import React from "react";
 import useFormSignup from "./useFormSignup";
 
 import logo from "../../img/logo.png";

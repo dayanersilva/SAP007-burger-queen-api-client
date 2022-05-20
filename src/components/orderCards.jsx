@@ -1,4 +1,3 @@
-import React from "react";
 import OrderProducts from "./orderProduct";
 import { TimeOrInterval } from "./time/time";
 import { initialStatus } from "./time/date";

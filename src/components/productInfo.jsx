@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./components.module.css";
 
 const ProductsCards = ({ image, name, price, onClick }) => {
