@@ -8,12 +8,14 @@ import logoroxo from "../../img/logoroxo.png";
 import styles from "./menu.module.css";
 
 const Menu = () => {
+  const navigate = useNavigate();
   const {
     handleButtonTypeClick,
     productsFiltered,
     handleAddItem,
     handleSelectComplement,
     handleSelectFlavor,
+    handleDeleteProducts,
     handleSendToKitchen,
     handleOrderChange,
     productsType,
