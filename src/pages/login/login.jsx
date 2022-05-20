@@ -33,7 +33,7 @@ const Login = () => {
           />
           <span className={styles.errorsMessage}>{error}</span>
           <button className={styles.loginBtn} onClick={handleSubmit}>
-            Logar
+            Entrar
           </button>
           <div className={styles.toRegistration}>
             <p className={styles.registrationTitle}>Não possui cadastro?</p>

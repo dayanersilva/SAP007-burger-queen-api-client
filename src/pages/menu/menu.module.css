@@ -1,0 +1,180 @@
+.root::before {
+  content: '';
+  background-color: var(--default-background);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.navBar {
+  background-color: var(--default-background);
+  width: 100%;
+  height: 4rem;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuHamburguer {
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+.liMenu{
+  color: var(--fonte-principal);
+  font-weight: bolder;
+}
+
+.logoroxo {
+  width: 6rem;
+  margin-top: 0.4rem;
+  margin-right: 1rem;
+}
+
+.abaAtendente {
+  margin: 0.5rem;
+  display: flex;
+  height: 84vh;
+}
+
+.sectionMenu {
+  width: 60%;
+}
+
+.selects {
+  margin-top: 0.3rem;
+  display: inline-flex;
+  width: 55%;
+  justify-content: space-between;
+  color: var(--fonte-principal);
+}
+
+.selectComplement {
+  display: inline-flex;
+  width: 55%;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.complementQueijo,
+.complementOvo {
+  margin-right: 0.3rem;
+}
+
+.complementOvo {
+  margin-left: 0.5rem;
+}
+
+.selectFlavor {
+  color: var(--fonte-principal);
+  background: none;
+  border: none;
+  outline: none;
+  width: 6rem;
+}
+
+.sectionPedido {
+  width: 38%;
+  margin-left: 1rem;
+}
+
+.selectionMenu {
+  border: 0.1rem solid var(--fonte-second);
+  border-radius: 0.3rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sectionPedidoTitle {
+  height: 2.2rem;
+  border-radius: 0.3rem;
+  background-color: var(--fonte-principal);
+  box-shadow: 2px 2px 2px var(--fonte-second); 
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.hColor{
+  color: var(--default-font-color);
+}
+
+.totalPedido {
+  display: flex;
+  color: var(--fonte-principal);
+  justify-content: space-between;
+  background-color: var(--default-background);
+  align-items: center;
+  height: 2rem;
+  border: 0.1rem solid var(--fonte-principal);
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+}
+
+.final {
+  position: fixed;
+  bottom: 12px;
+  width: 37.2%;
+}
+
+.infosCliente {
+  display: inline-flex;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+
+.nameCliente,
+.mesaCliente {
+  background: var(--default-background);
+  border: 0.1rem solid var(--fonte-principal);
+  outline: none;
+  border-radius: 0.3rem;
+  color: var(--fonte-principal);
+}
+
+.mesaCliente option,
+.selectFlavor option {
+  background: var(--background-cards);
+}
+
+.nameCliente {
+  margin-right: 0.4rem;
+  height: 2rem;
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+.nameCliente::placeholder{
+  color: var(--fonte-principal);
+}
+
+
+.finalizarPedido {
+  height: 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: var(--fonte-principal);
+  box-shadow: 2px 2px 2px var(--fonte-second);
+  color: var(--default-font-color);
+  font-weight: bold;
+}
+
+.buttonMenu {
+  background: transparent;
+  color: var(--fonte-principal);
+  border: none;
+}
+
+.listProducts {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0.5rem;
+  margin-top: 1rem;
+}
