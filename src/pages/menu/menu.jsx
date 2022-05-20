@@ -4,13 +4,11 @@ import ProductsCards from "../../components/productInfo";
 import Cart from "../../components/cart";
 import ResultPrice from "../../components/resultPrice";
 import MenuHamburguer from "../../components/menuHamburguer";
-import { useNavigate } from "react-router-dom";
 
 import logoroxo from "../../img/logoroxo.png";
 import styles from "./menu.module.css";
 
 const Menu = () => {
-  const navigate = useNavigate();
   const {
     handleButtonTypeClick,
     productsFiltered,

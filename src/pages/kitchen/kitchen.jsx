@@ -9,9 +9,9 @@ const Kitchen = () => {
     useEffect(() => {
       const interval = setInterval(() => {
         return getData();
-      }, 50);
+      }, 5000);
       return () => clearInterval(interval);
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
   
     useEffect(() => {
       if (orderStatus.status === 'finalizado') {
@@ -25,7 +25,7 @@ const Kitchen = () => {
           return orders;
         })
       }
-    }, [orderStatus]);
+    }, [orderStatus]); // eslint-disable-line react-hooks/exhaustive-deps
   
     return ( 
     <main className='kitchen-main'>

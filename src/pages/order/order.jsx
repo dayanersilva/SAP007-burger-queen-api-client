@@ -9,7 +9,7 @@ const Order =  () => {
       useEffect(() => {
         const interval = setInterval(() => {
           return getData();
-        }, 500);
+        }, 5000);
         return () => clearInterval(interval);
       }, [])
 
