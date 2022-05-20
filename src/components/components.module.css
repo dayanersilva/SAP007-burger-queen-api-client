@@ -93,6 +93,7 @@
 .logoutButton {
   position: absolute;
   bottom: 15px;
+  color: var(--fonte-principal);
 }
 
 /* "Animação" do menu hamburguer */

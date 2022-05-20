@@ -39,17 +39,6 @@ const Menu = () => {
             />
           </picture>
         </nav>
-        <div className="request">
-          <button
-            className="btn-request"
-            onClick={() => {
-              navigate("/order");
-            }}
-            value="request"
-          >
-            Pedidos
-          </button>
-        </div>
         <section className={styles.attendantTabe}>
           <section className={styles.orderingTab}>
             <div>

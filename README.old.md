@@ -1,18 +1,10 @@
-# Burger Queen (API Client)
+***
 
-## Índice
-
-* [1. Prefácio](#1-prefácio)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínimos do projeto](#5-critérios-mínimos-de-aceitação-do-projeto)
-* [6. Hacker Edition](#6-hacker-edition)
-* [7. Pistas, tips e leituras complementares](#7-pistas-tips-e-leituras-complementares)
+![logoroxo](src/img/logoroxo.png)
 
 ***
 
-## 1. Prefácio
+##  Sobre o projeto
 
 [React](https://reactjs.org/), [Angular](https://angular.io/) e
 [Vue](https://vuejs.org/) são alguns dos _frameworks_ e _bibliotecas_ de
@@ -54,41 +46,41 @@ Estas são as informações que temos do cliente:
 
 > Somos **Burger Queen**, um fast food 24hrs.
 >
->A nossa proposta de serviço 24 horas foi muito bem recebida e, para continuar a
->crescer, precisamos de um sistema que nos ajude a receber pedidos de nossos
->clientes.
+> A nossa proposta de serviço 24 horas foi muito bem recebida e, para continuar a
+> crescer, precisamos de um sistema que nos ajude a receber pedidos de nossos
+> clientes.
 >
->Nós temos 2 menus. Um muito simples para o café da manhã:
+> Nós temos 2 menus. Um muito simples para o café da manhã:
 >
->| Ítem                      |Preço R$|
->|---------------------------|------|
->| Café americano            |    5 |
->| Café com leite            |    7 |
->| Sanduíche de presunto e queijo|   10 |
->| Suco de fruta natural     |    7 |
+> | Ítem                           | Preço R$ |
+> | ------------------------------ | -------- |
+> | Café americano                 | 5        |
+> | Café com leite                 | 7        |
+> | Sanduíche de presunto e queijo | 10       |
+> | Suco de fruta natural          | 7        |
 >
->E outro menu para o resto do dia:
+> E outro menu para o resto do dia:
 >
->| Ítem                      |Preço |
->|---------------------------|------|
->|**Hambúrgueres**           |   **R$**   |
->|Hambúrguer simples         |    10|
->|Hambúrguer duplo           |    15|
->|**Acompanhamentos**        |   **R$**   |
->|Batata frita               |     5|
->|Anéis de cebola            |     5|
->|**Bebidas**                |   **R$**   |
->|Água 500ml                 |     5|
->|Água 750ml                 |     7|
->|Bebida gaseificada 500ml   |     7|
->|Bebida gaseificada 750ml   |    10|
+> | Ítem                     | Preço  |
+> | ------------------------ | ------ |
+> | **Hambúrgueres**         | **R$** |
+> | Hambúrguer simples       | 10     |
+> | Hambúrguer duplo         | 15     |
+> | **Acompanhamentos**      | **R$** |
+> | Batata frita             | 5      |
+> | Anéis de cebola          | 5      |
+> | **Bebidas**              | **R$** |
+> | Água 500ml               | 5      |
+> | Água 750ml               | 7      |
+> | Bebida gaseificada 500ml | 7      |
+> | Bebida gaseificada 750ml | 10     |
 >
 > **Importante:** Os clientes podem escolher entre hambúrgueres de carne bovina,
 > frango ou vegetariano. Além disso, por um adicional de R\$ 1,00 , eles podem
 > adicionar queijo **ou** ovo.
 >
->Nossos clientes são bastante indecisos, por isso é muito comum que eles mudem o
->seu pedido várias vezes antes de finalizar.
+> Nossos clientes são bastante indecisos, por isso é muito comum que eles mudem o
+> seu pedido várias vezes antes de finalizar.
 
 A interface deve mostrar os dois menus (café da manhã e restante do dia), cada
 um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
@@ -117,87 +109,87 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 - [ ] **Uso de HTML semântico**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [HTML semântico](https://curriculum.laboratoria.la/pt/topics/html/02-html5/02-semantic-html)
-  * [Semantics in HTML - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+  - [HTML semântico](https://curriculum.laboratoria.la/pt/topics/html/02-html5/02-semantic-html)
+  - [Semantics in HTML - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+  </p></details>
 
 ### CSS
 
 - [ ] **Uso de seletores de CSS**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/pt/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org//pt-BR/docs/Web/CSS/CSS_Selectors)
-</p></details>
+  - [Intro a CSS](https://curriculum.laboratoria.la/pt/topics/css/01-css/01-intro-css)
+  - [CSS Selectors - MDN](https://developer.mozilla.org//pt-BR/docs/Web/CSS/CSS_Selectors)
+  </p></details>
 
 - [ ] **Empregar o modelo de caixa (box model): borda, margem, preenchimento**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Modelo de Caixa e Display](https://curriculum.laboratoria.la/pt/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+  - [Modelo de Caixa e Display](https://curriculum.laboratoria.la/pt/topics/css/01-css/02-boxmodel-and-display)
+  - [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+  - [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
+  - [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
+  </p></details>
 
 - [ ] **Uso de flexbox en CSS**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#pt-br)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
+  - [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  - [Flexbox Froggy](https://flexboxfroggy.com/#pt-br)
+  - [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+  </p></details>
 
 - [ ] **Uso de CSS Grid Layout**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [A Complete Guide to Grid - CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-  * [Grids - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
-</p></details>
+  - [A Complete Guide to Grid - CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+  - [Grids - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
+  </p></details>
 
 - [ ] **Uso de media queries**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [CSS media queries - MDN](https://developer.mozilla.org/pt-BR/docs/web/css/media_queries/using_media_queries)
-</p></details>
+  - [CSS media queries - MDN](https://developer.mozilla.org/pt-BR/docs/web/css/media_queries/using_media_queries)
+  </p></details>
 
 ### JavaScript
 
 - [ ] **Testes unitários**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
-</p></details>
+  - [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
+  </p></details>
 
 - [ ] **Testes assíncronos**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Testando Código Assíncrono - Documentação oficial](https://jestjs.io/docs/pt-BR/asynchronous)
-</p></details>
+  - [Testando Código Assíncrono - Documentação oficial](https://jestjs.io/docs/pt-BR/asynchronous)
+  </p></details>
 
 - [ ] **Mocking**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Simulações Manuais - Documentação oficial](https://jestjs.io/docs/pt-BR/manual-mocks)
-</p></details>
+  - [Simulações Manuais - Documentação oficial](https://jestjs.io/docs/pt-BR/manual-mocks)
+  </p></details>
 
 - [ ] **Uso ES modules**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [import - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
+  - [import - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
+  - [export - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
+  </p></details>
 
 - [ ] **Uso de linter (ESLINT)**
 
@@ -215,10 +207,10 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 - [ ] **GitHub: Implantação com GitHub Pages**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Site oficial do GitHub Pages](https://pages.github.com/)
-</p></details>
+  - [Site oficial do GitHub Pages](https://pages.github.com/)
+  </p></details>
 
 - [ ] **GitHub: Colaboração pelo Github (branches | forks | pull requests | code review | tags)**
 
@@ -228,54 +220,54 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 - [ ] **Solicitações o requisições (request) e respostas (response).**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Uma visão geral do HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
-  * [Mensagens HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages)
-</p></details>
+  - [Uma visão geral do HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
+  - [Mensagens HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages)
+  </p></details>
 
 - [ ] **Cabeçalhos (headers)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Cabeçalhos HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers)
-</p></details>
+  - [Cabeçalhos HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers)
+  </p></details>
 
 - [ ] **Corpo (body)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Mensagens HTTP / Corpo - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages#corpo)
-</p></details>
+  - [Mensagens HTTP / Corpo - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages#corpo)
+  </p></details>
 
 - [ ] **Verbos HTTP**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Métodos de requisição HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
-</p></details>
+  - [Métodos de requisição HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
+  </p></details>
 
 - [ ] **Codigos de status de HTTP**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Códigos de status de respostas HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
-  * [The Complete Guide to Status Codes for Meaningful ReST APIs - dev.to](https://dev.to/khaosdoctor/the-complete-guide-to-status-codes-for-meaningful-rest-apis-1-5c5)
-</p></details>
+  - [Códigos de status de respostas HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
+  - [The Complete Guide to Status Codes for Meaningful ReST APIs - dev.to](https://dev.to/khaosdoctor/the-complete-guide-to-status-codes-for-meaningful-rest-apis-1-5c5)
+  </p></details>
 
 - [ ] **Encodings e JSON**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Introdução ao JSON - Documentação oficial](https://www.json.org/json-pt.html)
-</p></details>
+  - [Introdução ao JSON - Documentação oficial](https://www.json.org/json-pt.html)
+  </p></details>
 
 - [ ] **CORS (Cross-Origin Resource Sharing)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Cross-Origin Resource Sharing (CORS) - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
-</p></details>
+  - [Cross-Origin Resource Sharing (CORS) - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
+  </p></details>
 
 ### react
 
@@ -350,7 +342,7 @@ serão feitos por você.
 O [_Product Owner_](https://www.youtube.com/watch?v=7lhnYbmovb4) nos apresentou
 este _backlog_ que é o resultado do seu trabalho com o cliente até hoje.
 
-***
+---
 
 #### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema
 
@@ -360,21 +352,21 @@ Eu, como garçom/garçonete quero entrar no sistema de pedidos.
 
 O que deve acontecer para satisfazer as necessidades do usuário?
 
-* Acessar uma tela de login.
-* Inserir email e senha.
-* Receber mensagens de erros compreensíveis, conforme o erro e as informações inseridas.
-* Entrar no sistema de pedidos caso as credenciais forem corretas.
+- Acessar uma tela de login.
+- Inserir email e senha.
+- Receber mensagens de erros compreensíveis, conforme o erro e as informações inseridas.
+- Entrar no sistema de pedidos caso as credenciais forem corretas.
 
 ##### Definição de pronto
 
 O acordado abaixo deve acontecer para dizer que a história está terminada:
 
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Fez _testes_ unitários e, além disso, testou seu produto manualmente.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
+- Você deve ter recebido _code review_ de pelo menos uma parceira.
+- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
+- Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
+- Você deu deploy de seu aplicativo e marcou sua versão (tag git).
 
-***
+---
 
 #### [História de usuário 2] Garçom/Garçonete deve ser capaz de anotar o pedido do cliente
 
@@ -386,23 +378,23 @@ cozinha para serem preparados em ordem.
 
 O que deve acontecer para satisfazer as necessidades do usuário?
 
-* Anotar o nome do cliente.
-* Adicionar produtos aos pedidos.
-* Excluir produtos.
-* Ver resumo e o total da compra.
-* Enviar o pedido para a cozinha (guardar em algum banco de dados).
-* Funcionar bem em um _tablet_.
+- Anotar o nome do cliente.
+- Adicionar produtos aos pedidos.
+- Excluir produtos.
+- Ver resumo e o total da compra.
+- Enviar o pedido para a cozinha (guardar em algum banco de dados).
+- Funcionar bem em um _tablet_.
 
 ##### Definição de pronto
 
 O acordado abaixo deve acontecer para dizer que a história está terminada:
 
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Fez _testes_ unitários e, além disso, testou seu produto manualmente.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
+- Você deve ter recebido _code review_ de pelo menos uma parceira.
+- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
+- Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
+- Você deu deploy de seu aplicativo e marcou sua versão (tag git).
 
-***
+---
 
 #### [História de usuário 3] Chefe de cozinha deve ver os pedidos
 
@@ -412,19 +404,19 @@ está pronto para ser entregue ao cliente.
 
 ##### Critérios de aceitação
 
-* Ver os pedidos ordenados à medida em que são feitos.
-* Marcar os pedidos que foram preparados e estão prontos para serem servidos.
-* Ver o tempo que levou para preparar o pedido desde que chegou, até ser marcado
+- Ver os pedidos ordenados à medida em que são feitos.
+- Marcar os pedidos que foram preparados e estão prontos para serem servidos.
+- Ver o tempo que levou para preparar o pedido desde que chegou, até ser marcado
   como concluído.
 
 ##### Definição de pronto
 
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Fez _testes_ unitários e, além disso, testou seu produto manualmente.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
+- Você deve ter recebido _code review_ de pelo menos uma parceira.
+- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
+- Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
+- Você deu deploy de seu aplicativo e marcou sua versão (tag git).
 
-***
+---
 
 #### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir
 
@@ -433,19 +425,19 @@ rapidamente aos clientes.
 
 ##### Critérios de aceitação
 
-* Ver a lista de pedidos prontos para servir.
-* Marcar os pedidos que foram entregues.
+- Ver a lista de pedidos prontos para servir.
+- Marcar os pedidos que foram entregues.
 
 ##### Definição de pronto
 
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Fez _testes_ unitários e, além disso, testou seu produto manualmente.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
-* Os dados devem ser mantidos intactos, mesmo depois que um pedido for
+- Você deve ter recebido _code review_ de pelo menos uma parceira.
+- Fez _testes_ unitários e, além disso, testou seu produto manualmente.
+- Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
+- Você deu deploy de seu aplicativo e marcou sua versão (tag git).
+- Os dados devem ser mantidos intactos, mesmo depois que um pedido for
   finalizado. Tudo isso para poder ter estatísticas no futuro.
 
-***
+---
 
 ## 6. Hacker Edition
 
@@ -455,6 +447,7 @@ A aplicação deve seguir 80% ou mais das pontuações de Performance, Progressi
 Web App, Accessibility e Best Practices do [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
 ## 7. Pistas, tips e leituras complementares
+
 ### Primeiros passos
 
 1. Faça um _fork_ deste repositório (no GitHub).
@@ -472,34 +465,34 @@ Web App, Accessibility e Best Practices do [Lighthouse](https://developers.googl
    git checkout -b develop
    ```
 
-4. Veja o video de configuração inicial para você poder começar com o _front-end_ :wink:. 
+4. Veja o video de configuração inicial para você poder começar com o _front-end_ :wink:.
 
-***
+---
 
 ### Frameworks / bibliotecas
 
-* [React](https://reactjs.org/)
-* [React beta - versão em construção usando Hooks ](https://beta.reactjs.org/)
-* [Create React App](https://create-react-app.dev/docs/getting-started)
-* [Configuração inicial (vídeo)](https://youtu.be/38iZjr-jH5E)
+- [React](https://reactjs.org/)
+- [React beta - versão em construção usando Hooks ](https://beta.reactjs.org/)
+- [Create React App](https://create-react-app.dev/docs/getting-started)
+- [Configuração inicial (vídeo)](https://youtu.be/38iZjr-jH5E)
 
 ### Ferramentas
 
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
+- [npm-scripts](https://docs.npmjs.com/misc/scripts)
+- [Babel](https://babeljs.io/)
+- [webpack](https://webpack.js.org/)
 
 ### Rotas
 
-* [React Router](https://reactrouter.com/web/guides/quick-start)
+- [React Router](https://reactrouter.com/web/guides/quick-start)
 
 ### PWA
 
-* [Seu primeiro Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-* [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
+- [Seu primeiro Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
+- [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
 
 ### Deploy
 
-* Veja a documentação [de deploy do Create React App](https://create-react-app.dev/docs/deployment).
-Você pode utilizar qualquer um dos serviços listados na documentação,
-sendo recomendado o Firebase, Vercel, Netlify, Github Pages ou Heroku.
+- Veja a documentação [de deploy do Create React App](https://create-react-app.dev/docs/deployment).
+  Você pode utilizar qualquer um dos serviços listados na documentação,
+  sendo recomendado o Firebase, Vercel, Netlify, Github Pages ou Heroku.

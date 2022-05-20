@@ -26,7 +26,11 @@ const MenuHamburguer = () => {
               <button>COZINHA</button>
             </li>
             <li>
-              <button>PEDIDOS PRONTOS</button>
+              <button
+                onClick={() => {
+                  navigate("/order");
+                }}>PEDIDOS PRONTOS
+              </button>
             </li>
             <li className={styles.logoutButton}>
               <button
