@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logoroxo](src/img/logoroxo.png)
 
-## Available Scripts
+***
 
-In the project directory, you can run:
+## SOBRE O PROJETO
 
-### `npm start`
+**Quem Disse Burguer ?** é um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma interface em que se possa realizar pedidos utilizando um tablet, e enviá-los para a cozinha para que sejam preparados de forma ordenada e eficiente.
+Esta aplicação permite que qualquer funcionário do restaurante possa criar uma conta de acesso com suas respectivas credenciais (atendente ou chef de cozinha) e logar-se com ela. Realizando pedidos, e enviando os para a cozinha para que sejam preparados de forma ordenada e eficiente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este projeto tem duas áreas: interface (cliente) e API (servidor). Nosso cliente nos pediu para desenvolver uma interface que se integre com a API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Estas são as informações que temos do cliente:
 
-### `npm test`
+> Somos **Quem disse Burguer ?**, um fast food 24hrs.
+>
+>A nossa proposta de serviço 24 horas foi muito bem recebida e, para continuar a
+>crescer, precisamos de um sistema que nos ajude a receber pedidos de nossos
+>clientes.
+>
+>Nós temos 2 menus. Um muito simples para o café da manhã:
+>
+>| Ítem                      |Preço R$|
+>|---------------------------|------|
+>| Café americano            |    5 |
+>| Café com leite            |    7 |
+>| Sanduíche de presunto e queijo|   10 |
+>| Suco de fruta natural     |    7 |
+>
+>E outro menu para o resto do dia:
+>
+>| Ítem                      |Preço |
+>|---------------------------|------|
+>|**Hambúrgueres**           |   **R$**   |
+>|Hambúrguer simples         |    10|
+>|Hambúrguer duplo           |    15|
+>|**Acompanhamentos**        |   **R$**   |
+>|Batata frita               |     5|
+>|Anéis de cebola            |     5|
+>|**Bebidas**                |   **R$**   |
+>|Água 500ml                 |     5|
+>|Água 750ml                 |     7|
+>|Bebida gaseificada 500ml   |     7|
+>|Bebida gaseificada 750ml   |    10|
+>
+> **Importante:** Os clientes podem escolher entre hambúrgueres de carne bovina,
+> frango ou vegetariano. Além disso, por um adicional de R\$ 1,00 , eles podem
+> adicionar queijo **ou** ovo.
+>
+>Nossos clientes são bastante indecisos, por isso é muito comum que eles mudem o
+>seu pedido várias vezes antes de finalizar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Acesse [Quem disse Burguer ?](https://dayanersilva.github.io/SAP007-burger-queen-api-client/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## HISTÓRIA DO USUARIO
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Eu, como garçom/garçonete quero entrar no sistema de pedidos.
 
-### `npm run eject`
+#### [História de usuário 2] Garçom/Garçonete deve ser capaz de anotar o pedido do cliente
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Eu como garçom/garçonete quero poder anotar o pedido de um cliente para não
+depender da minha memória, saber quanto cobrar e poder enviar os pedidos para a
+cozinha para serem preparados em ordem.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### [História de usuário 3] Chefe de cozinha deve ver os pedidos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder
+marcar que estão prontos e poder notificar os garçons/garçonetes que o pedido
+está pronto para ser entregue ao cliente.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir
 
-## Learn More
+Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los
+rapidamente aos clientes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 3 PROTÓTIPOS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](src/img/Login.jpg)
+![](src/img/Cadastro.jpg)
+![](src/img/MenuManhã.jpg)
+![](src/img/MenuHamburguer.jpg)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Paleta de cores 
 
-### Analyzing the Bundle Size
+![](src/img/Paleta.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## FLUXOGRAMA
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![](src/img/Fluxograma.png)
 
-### Advanced Configuration
+## TESTES
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Foram realizados teste unitários, assíncronos e integrados.
 
-### Deployment
+Os testes de unidade cobrem no mínimo 70% de statements, functions, lines e branches.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+A aplicação segue 70% ou mais das pontuações de Performance, Progressive Web App, Accessibility e Best Practices do [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
-### `npm run build` fails to minify
+![](src/img/light1.png)
+![](src/img/light2.png)
+![](src/img/light3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## TESTE DE USABILIDADE
+
+### Definição do produto
+
+A cada entrega de história de usuário fizemos testes de usabilidade. A partir desses testes verificamos a necessidade de fazer alterações nas paginas, por exemplo a tela de menu, que foi alterada as cores e tamanho das fontes e ajustes nas mensagens de erro ao cadastrar. Melhoramos também o design da aplicação, padronizando as fontes e cores do feed, proporcionando assim uma experência visual mais agradável para os usuários.
+
+
+## AUTORAS
+
+### DAYANE RODRIGUES
+[@Dayane Linkedin](https://www.linkedin.com/in/dayaneersilva/)
+
+### SUELEN ESCÓRCIO
+
+[@Suelen Linkedin](https://www.linkedin.com/in/suelen-escorcio/)
+

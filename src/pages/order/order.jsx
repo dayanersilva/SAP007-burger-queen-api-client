@@ -1,33 +1,19 @@
-import { useEffect } from "react";
-import useKitchen from "./useKitchen"
-import OrderCard from "../../components/orderCards";
-import styles from './kitchen.module.css';
-import MenuHamburguer from '../../components/menuHamburguer.jsx';
-import logoroxo from '../../img/logoroxo.png';
+import { useEffect } from 'react';
+import useOrder from './useOrder';
+import OrderCard from '../../components/orderCards';
+import styles from '../kitchen/kitchen.module.css';
+import MenuHamburguer from "../../components/menuHamburguer.jsx";
+import logoroxo from '../../img/logo.png';
 
-const Kitchen = () => {
-  const { setOrders, getData, ordersFiltered, handleStatus, orders, orderStatus, error, } = useKitchen();
+const Order = () => {
+  const { getData, ordersFiltered, handleStatus, error } = useOrder();
 
   useEffect(() => {
     const interval = setInterval(() => {
       return getData();
-    }, 5000);
+    }, 500);
     return () => clearInterval(interval);
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => {
-    if (orderStatus.status === 'finalizado') {
-      return orderStatus.map((order) => {
-        const foundOrder = orders.map((elem) => elem).findIndex((item) => item.id === order.id);
-        if (foundOrder !== -1) {
-          const removed = orders
-          removed.splice(foundOrder, 1)
-          setOrders([...removed])
-        }
-        return orders;
-      })
-    }
-  }, [orderStatus]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={styles.root}>
@@ -45,7 +31,7 @@ const Kitchen = () => {
         <ul className={styles.wishList}>
           {ordersFiltered().map((elem) => {
             const clientProducts = elem.Products;
-            const product = clientProducts.map((product) => product);
+            const product = clientProducts.map((product) => product)
             return (
               <li key={elem.id}>
                 <OrderCard
@@ -54,16 +40,18 @@ const Kitchen = () => {
                   table={elem.table}
                   status={elem.status}
                   createdAt={elem.createdAt}
+                  updatedAt={elem.updatedAt}
                   onClick={() => handleStatus(elem)}
+                  nameButton={'Servir pedido'}
                   products={product}
                   error={error}
                 />
               </li>
-            );
+            )
           })}
         </ul>
       </main>
     </div>
   );
 };
-export default Kitchen;
+export default Order;

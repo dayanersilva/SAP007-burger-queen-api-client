@@ -1,0 +1,51 @@
+.root::before {
+  content: '';
+  background-color: var(--default-background);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+/* NAV-BAR */
+.navBar {
+  height: 4rem;
+  width: 100%;
+  background-color: var(--default-background);
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+.menuHamburguer {
+  height: 3.125rem;
+  list-style-type: none;
+}
+
+.logoroxo {
+  width: 6rem;
+  margin-top: 0.3rem;
+  margin-right: 1rem;
+}
+
+.wishList {
+  padding: 5rem 1rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1rem 0.3rem;
+  background: var(--default-background);
+}
+
+.wishList li {
+  box-shadow: 2px 2px 2px var(--default-background);
+  border-radius: 0.3rem;
+}
+
+@media only screen and (min-width:769px) {
+  .wishList {
+    grid-template-columns: auto auto auto auto;
+  }
+}

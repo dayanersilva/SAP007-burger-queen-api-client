@@ -1,0 +1,302 @@
+/* CARRINHO DE PEDIDOS */
+.order {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.orderContainer {
+  display: inline-flex;
+}
+
+.orderInformation {
+  font-size: 0.87rem;
+  margin-left: 1rem;
+}
+
+.priceContainerAndDelete {
+  display: flex;
+  align-items: center;
+}
+
+.deleteItem {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+}
+
+/* MENU HAMBURGUER */
+.icon {
+  height: 44px;
+  width: fit-content;
+  padding: 4px 25px;
+  margin-left: 1rem;
+  position: absolute;
+  top: 8px;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.hamburguer {
+  height: 3px;
+  width: 37px;
+  background-color: var(--fonte-principal);
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transition: 0.5s;
+}
+
+.hamburguer::before {
+  content: '';
+  height: 3px;
+  width: 37px;
+  background-color: var(--fonte-principal);
+  position: absolute;
+  top: -12px;
+  transition: 0.5s;
+}
+
+.hamburguer::after {
+  content: '';
+  height: 3px;
+  width: 37px;
+  background-color: var(--fonte-principal);
+  position: absolute;
+  top: 12px;
+  transition: 0.5s;
+}
+
+.hamburguerMenuList {
+  height: 90%;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.hamburguerMenuListItems {
+  height: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.hamburguerMenuListItems li {
+  height: 2rem;
+  margin: 2px 8px 2px 15px;
+  display: flex;
+  align-items: center;
+
+}
+
+.hamburguerMenuListItems li:hover {
+  font-weight: 600;
+}
+
+.hamburguerMenuListItems li button {
+  border: none;
+  background: transparent;
+  color: var(--fonte-principal);
+  cursor: pointer;
+}
+
+.logoutButton {
+  position: absolute;
+  bottom: 15px;
+}
+
+/* "Animação" do menu hamburguer */
+.icon.iconActive .hamburguer {
+  background: transparent;
+  box-shadow: 0 2px 5px transparent;
+}
+
+.icon.iconActive .hamburguer::before {
+  background: var(--fonte-principal);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.icon.iconActive .hamburguer::after {
+  background: var(--fonte-principal);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+  transform: rotate(225deg);
+}
+
+.menu.menuOpen {
+  width: 25vw;
+  height: 86vh;
+  background: var(--background-cards);
+  box-shadow: 10px 0px 10px 0 rgba(0, 0, 0, 0.10);
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 65px;
+}
+
+.menu.menuClose {
+  width: 0;
+  display: none;
+}
+
+.card {
+  background-color: var(--background-cards);
+  height: 7.5rem;
+  width: 13.7rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 2px var(--background-cards);
+}
+
+h3,
+h4 {
+  color: var(--fonte-principal);
+}
+
+.imageProduct {
+  height: 4rem;
+  width: 6rem;
+  border-radius: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  color: var(--fonte-principal);
+}
+
+.infos {
+  display: flex;
+  margin-top: 0.5rem;
+
+}
+
+.btnAndPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btnAndPrice p {
+  font-size: 0.9rem;
+  color: var(--fonte-principal);
+}
+
+.addProduct {
+  border-radius: 0.3rem;
+  height: 1.5rem;
+  width: 5rem;
+  background-color: var(--fonte-principal);
+  border: none;
+  margin-bottom: 0.25rem;
+  color: var(--default-font-color);
+}
+
+/* CARDS DOS PEDIDOS / COZINHA */
+.orderCardOrganization {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--default-background);
+  box-shadow: 0 0 0.3rem var(--background-cards);
+}
+
+.orderHeader {
+  height: 5rem;
+  background-color: var(--background-cards);
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 2px 2px var(--default-background);
+}
+
+.orderCustomer,
+.orderInformation {
+  height: 80%;
+  font-size: 0.95rem;
+  display: grid;
+  align-items: center;
+  color: var(--fonte-principal);
+}
+
+.orderInformation {
+  justify-items: end;
+}
+
+.orderItemList {
+  padding: 1rem 0.5rem;
+  color: var(--fonte-principal);
+}
+
+.orderItemPlaced {
+  display: flex;
+  margin-bottom: 1rem;
+  color: var(--fonte-principal);
+}
+
+.orderItemPlaced p {
+  margin-right: 0.7rem;
+  color: var(--fonte-principal);
+}
+
+.orderFooter {
+  height: 2rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.orderStatus {
+  height: 100%;
+  width: 50%;
+  color: var(--fonte-second);
+  font-style: italic;
+  border-radius: 0.3rem;
+  background-color: var(--background-cards);
+  padding: 0 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kitchenChefButton {
+  height: 100%;
+  width: 50%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: var(--fonte-principal);
+  padding: 0 0.5rem;
+  color: var(--default-font-color);
+}
+
+.prepared {
+  background-color: var(--default-red);
+}
+
+.errorMessage {
+  font-size: 0.7rem;
+  background-color: var(--default-red);
+}
+
+
+@media only screen and (min-width:769px) {
+  .menu.menuOpen {
+    height: 88vh;
+    width: 20vw;
+  }
+
+  .hamburguerMenuListItems li button {
+    font-size: 1rem;
+  }
+
+  .hamburguerMenuListItems li {
+    margin: 4px 8px 4px 15px;
+  }
+}

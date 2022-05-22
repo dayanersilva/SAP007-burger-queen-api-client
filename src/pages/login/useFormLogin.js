@@ -1,19 +1,17 @@
 import { useState } from 'react';
-import { createUser, loginUser } from '../../services/api';
+import { loginUser } from '../../services/api';
 import { useNavigate } from 'react-router-dom';
-import { TokenAndRole } from '../../Local/localStorageAndURL.js';
+import { TokenAndRole } from '../../Local/localStorageAndURL';
 
-const useFormSignup = () => {
+const useFormLogin = () => {
   const [error, setError] = useState('')
-  const [elements, setElement] = useState({
-    name: '',
+  const [elements, setElements] = useState({
     email: '',
     password: '',
-    role: '',
   });
 
   const handleChange = (e) => {
-    return setElement(() => {
+    return setElements(() => {
       const copyElements = { ...elements };
       copyElements[e.target.name] = e.target.value;
       return copyElements;
@@ -24,29 +22,23 @@ const useFormSignup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createUser('/users', elements)
+    loginUser('/auth', elements)
       .then((res) => {
         switch (res.status) {
           case 200:
             return res.json();
           case 400:
-            setError('Falta algo a ser preenchido!')
-            break;
-          case 403:
-            setError('E-mail já cadastrado!')
+            setError('E-mail e/ou senha inválidos!')
             break;
           default:
-            console.log('Algo deu errado. Tente novamente mais tarde.')
         }
       })
-      .then(data => {
+      .then((data) => {
         if (data.role === 'attendent') {
           TokenAndRole(data.token, data.role);
-          loginUser('/auth', data);
           navigate('/menu');
         } else if (data.role === 'chef') {
           TokenAndRole(data.token, data.role);
-          loginUser('/auth', data);
           navigate('/kitchen');
         }
       })
@@ -54,6 +46,6 @@ const useFormSignup = () => {
   };
 
   return { handleChange, handleSubmit, error };
-
 };
-export default useFormSignup;
+
+export default useFormLogin;
