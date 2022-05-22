@@ -13,16 +13,6 @@ const nameButton = (status) => {
   }
 };
 
-// const initialStatus = (status) => {
-//   if (status === 'pending') {
-//     return 'Pendente';
-//   } else if (status === 'preparando') {
-//     return 'Preparando';
-//   } else {
-//     return 'Finalizado';
-//   }
-// };
-
 const OrderCard = ({
   id,
   name,
