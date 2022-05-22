@@ -108,11 +108,16 @@ const useProducts = () => {
             setOrderError('Preencher nome e mesa do cliente')
           } else {
             setItems([]);
+            setFlavor([]);
+            setOrderError('');
+            setOrderInfo({ client: '', table: '' });
           }
         });
+    } else {
+      setOrderError('Apenas o/a atendente fazer um pedido')
     }
   };
 
-  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleDeleteProducts, handleSelectComplement, handleSendToKitchen, handleOrderChange, productsType, items, total, orderError }
+  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleDeleteProducts, handleSelectComplement, handleSendToKitchen, handleOrderChange, productsType, items, total, orderError, orderInfo, }
 };
 export default useProducts;

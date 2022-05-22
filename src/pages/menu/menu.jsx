@@ -21,6 +21,7 @@ const Menu = () => {
     total,
     items,
     orderError,
+    orderInfo,
   } = useProducts();
 
   return (
@@ -136,10 +137,11 @@ const Menu = () => {
                 name="client"
                 autoComplete="off"
                 onChange={handleOrderChange}
+                value={orderInfo.client}
               />
               <select
                 className={styles.clientTable}
-                defaultValue={"0"}
+                value={orderInfo.table}
                 autoComplete="off"
                 name="table"
                 onChange={handleOrderChange}

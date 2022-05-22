@@ -167,11 +167,13 @@ h4 {
 
 ul {
   list-style-type: none;
+  color: var(--fonte-principal);
 }
 
 .infos {
   display: flex;
   margin-top: 0.5rem;
+
 }
 
 .btnAndPrice {
@@ -206,8 +208,8 @@ ul {
 }
 
 .orderHeader {
-  height: 4rem;
-  background-color: var(--fonte-principal);
+  height: 5rem;
+  background-color: var(--background-cards);
   border-radius: 0.3rem;
   display: flex;
   justify-content: space-around;
@@ -221,7 +223,7 @@ ul {
   font-size: 0.95rem;
   display: grid;
   align-items: center;
-  color: var(--default-font-color);
+  color: var(--fonte-principal);
 }
 
 .orderInformation {
@@ -236,10 +238,12 @@ ul {
 .orderItemPlaced {
   display: flex;
   margin-bottom: 1rem;
+  color: var(--fonte-principal);
 }
 
 .orderItemPlaced p {
   margin-right: 0.7rem;
+  color: var(--fonte-principal);
 }
 
 .orderFooter {
