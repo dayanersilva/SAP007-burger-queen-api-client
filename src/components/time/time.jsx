@@ -3,13 +3,10 @@ import { getTime, getInterval } from './date.jsx';
 export const TimeOrInterval = ({
   createdAt,
   updatedAt,
-  status
 }) => {
   return (
     <>
-      <p className='chegada'>
-        Chegada:
-      </p>
+      <p className='chegada'></p>
       <p className='order-info'>{getTime(createdAt)}</p>
       {updatedAt ?
         <>

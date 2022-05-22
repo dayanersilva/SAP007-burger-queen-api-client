@@ -6,6 +6,7 @@ import { getRole } from "../../Local/localStorageAndURL";
 const useKitchen = () => {
   const [orders, setOrders] = useState([]);
   const [orderStatus, setOrderStatus] = useState([]);
+  const [error, setError] = useState('');
 
   const sortById = (data) => {
     return data.sort((a, b) => {
@@ -43,7 +44,7 @@ const useKitchen = () => {
             }]));
       }
     } else {
-      console.log('Apenas um(a) chef pode iniciar/finalizar um pedido')
+      setError('Apenas o(a) chef pode atualizar um pedido');
     }
   };
 
@@ -54,6 +55,7 @@ const useKitchen = () => {
     getData,
     ordersFiltered,
     handleStatus,
+    error,
   };
 };
 export default useKitchen;

@@ -11,6 +11,7 @@ const useProducts = () => {
   const [complement, setComplement] = useState('');
   const [total, setTotal] = useState(0);
   const [orderInfo, setOrderInfo] = useState({ client: '', table: '' });
+  const [orderError, setOrderError] = useState('');
 
 
   const getData = async () => {
@@ -104,15 +105,14 @@ const useProducts = () => {
         .then((res => res.json()))
         .then((data) => {
           if (data.code === 400) {
-            console.log('Preencha os campos com as informações do cliente');
+            setOrderError('Preencher nome e mesa do cliente')
           } else {
-            console.log('Pedido enviado para a cozinha com sucesso');
             setItems([]);
           }
         });
     }
   };
 
-  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleDeleteProducts, handleSelectComplement, handleSendToKitchen, handleOrderChange, productsType, items, total }
+  return { handleButtonTypeClick, productsFiltered, handleAddItem, handleSelectFlavor, handleDeleteProducts, handleSelectComplement, handleSendToKitchen, handleOrderChange, productsType, items, total, orderError }
 };
 export default useProducts;

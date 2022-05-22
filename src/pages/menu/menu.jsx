@@ -20,7 +20,9 @@ const Menu = () => {
     productsType,
     total,
     items,
+    orderError,
   } = useProducts();
+
   return (
     <div className={styles.root}>
       <main>
@@ -31,7 +33,7 @@ const Menu = () => {
           <picture>
             <img
               src={logoroxo}
-              alt="Quem disse Burguer"
+              alt="Quem disse Burguer ?"
               className={styles.logoroxo}
             />
           </picture>
@@ -104,9 +106,7 @@ const Menu = () => {
                     Ovo
                   </div>
                 </section>
-              ) : (
-                ""
-              )}
+              ) : ''}
             </div>
             <ul className={styles.productList}>
               {productsFiltered().map((element, index) => {
@@ -167,6 +167,7 @@ const Menu = () => {
                     complement={item.complement}
                     price={item.price}
                     qtd={item.qtd}
+                    type={item.sub_type}
                     onClick={() => handleDeleteProducts(item)}
                   />
                 );
@@ -177,6 +178,7 @@ const Menu = () => {
                 <h4>SUB-TOTAL</h4>
                 <ResultPrice value={total} />
               </div>
+              <p className={styles.orderError}>{orderError}</p>
               <button
                 className={styles.finalizeOrder}
                 onClick={handleSendToKitchen}

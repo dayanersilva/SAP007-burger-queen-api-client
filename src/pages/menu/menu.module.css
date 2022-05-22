@@ -23,7 +23,7 @@
   height: 3.125rem;
 }
 
-.liMenu{
+.liMenu {
   color: var(--fonte-principal);
   font-weight: bolder;
 }
@@ -102,17 +102,17 @@
   margin-left: 1rem;
 }
 
-.orderSectionTitle{
+.orderSectionTitle {
   height: 2.2rem;
   border-radius: 0.3rem;
   background-color: var(--fonte-principal);
-  box-shadow: 2px 2px 2px var(--fonte-second); 
+  box-shadow: 2px 2px 2px var(--fonte-second);
   display: flex;
   align-items: center;
   padding-left: 0.5rem;
 }
 
-.hColor{
+.hColor {
   color: var(--default-font-color);
 }
 
@@ -138,7 +138,7 @@
   padding-left: 0.5rem;
 }
 
-.clientName::placeholder{
+.clientName::placeholder {
   color: var(--fonte-principal);
 }
 
@@ -165,6 +165,13 @@
   padding: 0 0.5rem;
 }
 
+.orderError {
+  background-color: var(--default-red);
+  border-radius: 0.3rem;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+}
+
 .finalizeOrder {
   height: 2rem;
   border: none;
@@ -182,20 +189,25 @@
   .orderSelection {
     height: 3rem;
   }
+
   .selectionButton {
     font-size: 1.3rem;
   }
+
   .productList {
     margin-top: 2rem;
     grid-template-columns: auto auto auto;
   }
+
   .flavorAndComplementSelection {
     margin-top: 1rem;
   }
+
   .selectFlavor,
   .selectComplement {
     font-size: 1rem;
   }
+
   .orderSectionTitle {
     height: 3.2rem;
   }

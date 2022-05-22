@@ -14,6 +14,17 @@
   margin-left: 1rem;
 }
 
+.priceContainerAndDelete {
+  display: flex;
+  align-items: center;
+}
+
+.deleteItem {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+}
+
 /* MENU HAMBURGUER */
 .icon {
   height: 44px;
@@ -75,7 +86,7 @@
   margin: 2px 8px 2px 15px;
   display: flex;
   align-items: center;
-  cursor: pointer;
+
 }
 
 .hamburguerMenuListItems li:hover {
@@ -86,6 +97,7 @@
   border: none;
   background: transparent;
   color: var(--fonte-principal);
+  cursor: pointer;
 }
 
 .logoutButton {
@@ -142,8 +154,7 @@
 }
 
 h3,
-h4,
-p {
+h4 {
   color: var(--fonte-principal);
 }
 
@@ -171,6 +182,7 @@ ul {
 
 .btnAndPrice p {
   font-size: 0.9rem;
+  color: var(--fonte-principal);
 }
 
 .addProduct {
@@ -182,6 +194,93 @@ ul {
   margin-bottom: 0.25rem;
   color: var(--default-font-color);
 }
+
+/* CARDS DOS PEDIDOS / COZINHA */
+.orderCardOrganization {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--default-background);
+  box-shadow: 0 0 0.3rem var(--background-cards);
+}
+
+.orderHeader {
+  height: 4rem;
+  background-color: var(--fonte-principal);
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 2px 2px var(--default-background);
+}
+
+.orderCustomer,
+.orderInformation {
+  height: 80%;
+  font-size: 0.95rem;
+  display: grid;
+  align-items: center;
+  color: var(--default-font-color);
+}
+
+.orderInformation {
+  justify-items: end;
+}
+
+.orderItemList {
+  padding: 1rem 0.5rem;
+  color: var(--fonte-principal);
+}
+
+.orderItemPlaced {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.orderItemPlaced p {
+  margin-right: 0.7rem;
+}
+
+.orderFooter {
+  height: 2rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.orderStatus {
+  height: 100%;
+  width: 50%;
+  color: var(--fonte-second);
+  font-style: italic;
+  border-radius: 0.3rem;
+  background-color: var(--background-cards);
+  padding: 0 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kitchenChefButton {
+  height: 100%;
+  width: 50%;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: var(--fonte-principal);
+  padding: 0 0.5rem;
+  color: var(--default-font-color);
+}
+
+.prepared {
+  background-color: var(--default-red);
+}
+
+.errorMessage {
+  font-size: 0.7rem;
+  background-color: var(--default-red);
+}
+
 
 @media only screen and (min-width:769px) {
   .menu.menuOpen {

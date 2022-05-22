@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import useKitchen from "./useKitchen"
 import OrderCard from "../../components/orderCards";
+import styles from './kitchen.module.css';
+import MenuHamburguer from '../../components/menuHamburguer.jsx';
+import logoroxo from '../../img/logoroxo.png';
 
 const Kitchen = () => {
-  const { setOrders, getData, ordersFiltered, handleStatus, orders, orderStatus } = useKitchen();
+  const { setOrders, getData, ordersFiltered, handleStatus, orders, orderStatus, error, } = useKitchen();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,30 +30,40 @@ const Kitchen = () => {
   }, [orderStatus]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <main className='kitchen-main'>
-      <p>KITCHEN</p>
-      <div className='orders-list'>
-        {ordersFiltered().map((elem) => {
-          const clientProducts = elem.Products;
-          const product = clientProducts.map((product) => product)
-          return (
-            <div key={elem.id}>
-              <OrderCard
-                id={elem.id}
-                name={elem.client_name}
-                table={elem.table}
-                status={elem.status}
-                createdAt={elem.createdAt}
-                onClick={() => handleStatus(elem)}
-                products={product}
-              />
+    <div className={styles.root}>
+      <main>
+        <nav>
+          <section className={styles.navBar}>
+            <div className={styles.menuHamburguer}>
+              <MenuHamburguer />
             </div>
-          )
-        }
-        )}
-      </div>
-
-    </main>
-  )
-}
+            <picture>
+              <img src={logoroxo} alt="Quem disse Burguer ?" className={styles.logoroxo} />
+            </picture>
+          </section>
+        </nav>
+        <ul className={styles.wishList}>
+          {ordersFiltered().map((elem) => {
+            const clientProducts = elem.Products;
+            const product = clientProducts.map((product) => product);
+            return (
+              <li key={elem.id}>
+                <OrderCard
+                  id={elem.id}
+                  name={elem.client_name}
+                  table={elem.table}
+                  status={elem.status}
+                  createdAt={elem.createdAt}
+                  onClick={() => handleStatus(elem)}
+                  products={product}
+                  error={error}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </main>
+    </div>
+  );
+};
 export default Kitchen;

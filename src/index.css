@@ -1,5 +1,5 @@
-@import './pages/login/login-signup.module.css';
-@import './pages/menu/menu.module.css';
+/* @import './pages/login/login-signup.module.css';
+@import './pages/menu/menu.module.css'; */
 @import './components/components.module.css';
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
@@ -10,6 +10,8 @@
   --default-background: #f8f5fa;
   --fonte-principal: #a671cd;
   --fonte-second: #c3a9d6;
+  --default-red: #e23c2e;
+  --default-green: #309746;
 }
 
 * {
