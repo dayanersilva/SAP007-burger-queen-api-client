@@ -22,6 +22,7 @@ const Menu = () => {
     items,
     orderError,
     orderInfo,
+    flavor,
   } = useProducts();
 
   return (
@@ -76,7 +77,7 @@ const Menu = () => {
                 <section className={styles.flavorAndComplementSelection}>
                   <select
                     className={styles.selectFlavor}
-                    defaultValue={"escolher o sabor"}
+                    value={flavor}
                     onChange={handleSelectFlavor}
                   >
                     <option value="escolher o sabor">Sabor</option>
@@ -85,10 +86,8 @@ const Menu = () => {
                     <option value="vegetariano">Vegetariano</option>
                   </select>
                   <div
-                    defaultValue={"complemento"}
                     className={styles.selectComplement}
-                    onChange={handleSelectComplement}
-                  >
+                    onChange={handleSelectComplement}>
                     <input
                       type="radio"
                       name="check"

@@ -51,7 +51,7 @@ Estas são as informações que temos do cliente:
 >Nossos clientes são bastante indecisos, por isso é muito comum que eles mudem o
 >seu pedido várias vezes antes de finalizar.
 
-### Acesse [Quem disse Burguer ?](https://www.google.com)
+### Acesse [Quem disse Burguer ?](https://dayanersilva.github.io/SAP007-burger-queen-api-client/)
 
 
 ## HISTÓRIA DO USUARIO

@@ -8,7 +8,7 @@ import PrivateRoute from './privateRoute.js';
 
 const AllRoute = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <Routes>
           <Route path='/' element={<Login />} />
