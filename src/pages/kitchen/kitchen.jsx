@@ -8,6 +8,7 @@ import logoroxo from '../../img/logoroxo.png';
 const Kitchen = () => {
   const { setOrders, getData, ordersFiltered, handleStatus, orders, orderStatus, error, } = useKitchen();
 
+  // renderiza em um espaço de tempo o pedido e coloca na tela pro chef de cozinha
   useEffect(() => {
     const interval = setInterval(() => {
       return getData();

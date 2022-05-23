@@ -1,5 +1,6 @@
 import { URL, getToken } from "../Local/localStorageAndURL.js";
 
+//criar usuario
 export const createUser = (endpoint, elements) => {
   return fetch(`${URL}${endpoint}`, {
     method: 'POST',
@@ -16,6 +17,7 @@ export const createUser = (endpoint, elements) => {
   });
 };
 
+//login
 export const loginUser = (endpoint, elements) => {
   return fetch(`${URL}${endpoint}`, {
     method: 'POST',
@@ -29,6 +31,8 @@ export const loginUser = (endpoint, elements) => {
   });
 };
 
+
+//buscar produtos
 export const getProducts = (endpoint) => {
   return fetch(`${URL}${endpoint}`, {
     method: 'GET',
@@ -40,6 +44,8 @@ export const getProducts = (endpoint) => {
     .then(res => res.json());
 };
 
+
+//criando pedido/faz o pedido
 export const sendOrder = (endpoint, orderInfo, items) => {
   return fetch(`${URL}${endpoint}`, {
     method: 'POST',
@@ -55,6 +61,7 @@ export const sendOrder = (endpoint, orderInfo, items) => {
   })
 };
 
+//ordernar pedido(cozinha e pedido prontos)
 export const getOrders = (endpoint) => {
   return fetch(`${URL}${endpoint}`, {
     method: 'GET',
@@ -65,6 +72,8 @@ export const getOrders = (endpoint) => {
   }).then((res) => res.json())
 };
 
+
+// atualização dos status do pedido (pendente, pronto e servido)
 export const updateOrderStatus = (endpoint, id, status) => {
   id = id.toString();
   return fetch(`${URL}${endpoint}${id}`, {
