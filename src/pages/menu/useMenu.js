@@ -13,12 +13,13 @@ const useProducts = () => {
   const [orderInfo, setOrderInfo] = useState({ client: '', table: '' });
   const [orderError, setOrderError] = useState('');
 
-
+  //função que busca os produtos la na api 
   const getData = async () => {
     const data = await getProducts('/products');
     setProducts(data);
   };
 
+  // useEffect usado para renderizar na pagina eja colocar na tela o que pegou da API, sem dependencias
   useEffect(() => {
     getData();
   }, []);
@@ -57,6 +58,7 @@ const useProducts = () => {
     }
   };
 
+  //carrinho de compras
   const handleDeleteProducts = (elem) => {
     const foundItem = items.findIndex((item) => item.id === elem.id);
     if (foundItem !== -1) {
@@ -83,6 +85,7 @@ const useProducts = () => {
     }
   };
 
+  //valor do carrinho
   useEffect(() => {
     const sum = (previousValue, currentValue) => previousValue + currentValue;
     setTotal(() => {
@@ -91,6 +94,7 @@ const useProducts = () => {
     })
   }, [items]);
 
+  //buscando valore e informacoes do cliente e da mesa 
   const handleOrderChange = (e) => {
     return setOrderInfo(() => {
       const auxValues = { ...orderInfo };
@@ -99,6 +103,7 @@ const useProducts = () => {
     });
   };
 
+  //enviando pedido pra cozinha
   const handleSendToKitchen = () => {
     if (getRole() === 'attendent') {
       sendOrder('/orders', orderInfo, items)

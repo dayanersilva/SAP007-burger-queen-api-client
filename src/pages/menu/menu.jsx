@@ -90,20 +90,22 @@ const Menu = () => {
                     onChange={handleSelectComplement}>
                     <input
                       type="radio"
+                      id="queijo"
                       name="check"
                       value="queijo"
                       className={styles.cheeseComplement}
                       onChange={handleSelectComplement}
                     />{" "}
-                    Queijo
+                    <label htmlFor="queijo">Queijo</label>
                     <input
                       type="radio"
+                      id="ovo"
                       name="check"
                       value="ovo"
                       className={styles.eggComplement}
                       onChange={handleSelectComplement}
                     />{" "}
-                    Ovo
+                    <label htmlFor="ovo">Ovo</label>
                   </div>
                 </section>
               ) : ''}

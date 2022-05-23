@@ -1,7 +1,8 @@
 import OrderProducts from "./orderProduct";
 import { TimeOrInterval } from "./time/time";
 import { initialStatus } from "./time/date";
-import styles from './components.module.css'
+import styles from './components.module.css';
+import { getRole } from "../Local/localStorageAndURL";
 
 const nameButton = (status) => {
   if (status === "pending") {
@@ -68,7 +69,12 @@ const OrderCard = ({
       <p className={styles.errorMessage}>{error}</p>
       <div className={styles.orderFooter}>
         <p className={styles.orderStatus}>{initialStatus(status)}</p>
-        <button className={`kitchenChefButton ${colorClass(status)}`} onClick={onClick}> {nameButton(status)} </button>
+        {getRole() === 'chef' && initialStatus(status) === 'Pendente' || initialStatus(status) === 'Preparando' ? ( //eslint-disable-next-line
+          <button className={`kitchenChefButton ${colorClass(status)}`} onClick={onClick}> {nameButton(status)} </button>
+        ) : getRole() === 'attendent' && initialStatus(status) === 'Finalizado' ? (
+          <button className={`kitchenChefButton ${colorClass(status)}`} onClick={onClick}> {nameButton(status)} </button>
+        ) : ''}
+
       </div>
     </section>
   </section>

@@ -3,7 +3,7 @@ import useOrder from './useOrder';
 import OrderCard from '../../components/orderCards';
 import styles from '../kitchen/kitchen.module.css';
 import MenuHamburguer from "../../components/menuHamburguer.jsx";
-import logoroxo from '../../img/logo.png';
+import logoroxo from '../../img/logoroxo.png';
 
 const Order = () => {
   const { getData, ordersFiltered, handleStatus, error } = useOrder();
@@ -11,7 +11,7 @@ const Order = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       return getData();
-    }, 500);
+    }, 5000);
     return () => clearInterval(interval);
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 

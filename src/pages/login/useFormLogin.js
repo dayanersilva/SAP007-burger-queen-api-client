@@ -3,6 +3,8 @@ import { loginUser } from '../../services/api';
 import { useNavigate } from 'react-router-dom';
 import { TokenAndRole } from '../../Local/localStorageAndURL';
 
+
+//formulario de login
 const useFormLogin = () => {
   const [error, setError] = useState('')
   const [elements, setElements] = useState({
@@ -10,6 +12,7 @@ const useFormLogin = () => {
     password: '',
   });
 
+  //pegando os valores dos inputs e fazendo um copia
   const handleChange = (e) => {
     return setElements(() => {
       const copyElements = { ...elements };
@@ -18,6 +21,7 @@ const useFormLogin = () => {
     });
   };
 
+  //hoook que faz redirecionar pelas paginas
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -42,7 +46,7 @@ const useFormLogin = () => {
           navigate('/kitchen');
         }
       })
-      .catch((error) => {});
+      .catch((error) => { });
   };
 
   return { handleChange, handleSubmit, error };
