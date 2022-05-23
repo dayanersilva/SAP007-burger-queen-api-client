@@ -81,9 +81,6 @@ export const updateOrderStatus = (endpoint, id, status) => {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': getToken(),
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': true,
-      'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST',
     },
     body: JSON.stringify({
       status
